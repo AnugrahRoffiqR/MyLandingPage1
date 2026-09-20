@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio HasanBae — Linux enthusiast, open-source contributor. ordinary people, eating rice." />
+  <link rel="canonical" href="https://hasan.cnp.my.id/" />
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d1117">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="author" content="HasanBae" />
+  <meta name="keywords" content="HasanBae, Linux enthusiast, Arch Linux, szmaou, open-source" />
+  <meta property="og:title" content="HasanBae | Linux enthusiast" />
+  <meta property="og:description"
+    content="Linux enthusiast — ordinary people, eating rice. Explore my projects, skills, and setup." />
+  <meta property="og:url" content="https://hasan.cnp.my.id/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://github.com/szmaou.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="HasanBae | Linux enthusiast" />
+  <meta name="twitter:description" content="Linux enthusiast — ordinary people, eating rice." />
+  <meta name="twitter:image" content="https://github.com/szmaou.png" />
+  <link rel="preconnect" href="https://cdn.simpleicons.org">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://github.com">
+  <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin>
+  <link rel="dns-prefetch" href="https://avatars.githubusercontent.com">
+  <link rel="preload" as="image" href="assets/slime.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hasan",
+      "jobTitle": "Linux enthusiast",
+      "url": "https://hasan.cnp.my.id/",
+      "sameAs": [
+        "https://github.com/szmaou",
+        "https://www.instagram.com/san.baecoy",
+        "https://discord.gg/29jm2rbycb"
+      ],
+      "description": "Portfolio HasanBae — Linux enthusiast, open-source contributor. ordinary people, eating rice."
+    }
+    </script>
+  <link rel="icon" href="assets/slime.webp" type="image/webp" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/project.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"
+        }
+      }
+    </script>
+  <title>HasanBae | Linux enthusiast</title>
+</head>
+
+<body>
+  <div id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+  <header class="navbar">
+    <div class="nav-brand">
+      <a href="https://github.com/szmaou">szmaou</a>
+    </div>
+    <nav class="nav-menu" id="nav-menu">
+      <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#project" class="nav-link">Project</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <svg class="toggle-icon icon-sun" viewBox="0 0 512 512" fill="currentColor">
+        <use href="assets/icons.svg#sun" />
+      </svg>
+      <svg class="toggle-icon icon-moon" viewBox="0 0 512 512" fill="currentColor">
+        <use href="assets/icons.svg#moon" />
+      </svg>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <section id="home" class="section hero">
+      <canvas id="hero-particles" aria-hidden="true"></canvas>
+      <div class="hero-bg">
+        <video autoplay muted loop playsinline preload="none" poster="assets/slime.webp" aria-hidden="true"
+          disablepictureinpicture>
+          <source src="assets/saber-720p.webm" type="video/webm" preload="none" />
+          <source src="assets/saber.mp4" type="video/mp4" preload="none" />
+        </video>
+        <img class="hero-bg-img" src="assets/saber.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"
+          fetchpriority="low" width="1280" height="720" />
+      </div>
+      <div class="hero-content">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div id="slime-mount" class="slime-hero-top slime-fallback">
+              <canvas id="slime-canvas" aria-hidden="true"></canvas>
+            </div>
+            <h1 class="hero-title">Linux Enthusiast</h1>
+            <p class="hero-tagline">ordinary people, <em>eating rice</em></p>
+            <div class="hero-cta">
+              <a href="#project" class="btn btn-primary">My Project</a>
+              <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero-side">
+            <div class="about-image">
+              <div class="img-wrapper">
+                <img src="https://github.com/szmaou.png" width="224" height="224" alt="HasanBae" loading="eager"
+                  fetchpriority="high" />
+              </div>
+            </div>
+            <h3 class="hero-name">
+              I'm <span class="highlight">Nugi</span>
+            </h3>
+            <div class="about-side-block">
+              <h4 class="side-block-title">GitHub Stats</h4>
+              <div class="github-stats" id="github-stats">
+                <div class="github-stat">
+                  <span class="stat-number" id="gh-repos">--</span>
+                  <span class="stat-label">Repos</span>
+                </div>
+                <div class="github-stat">
+                  <span class="stat-number" id="gh-followers">--</span>
+                  <span class="stat-label">Followers</span>
+                </div>
+                <div class="github-stat">
+                  <span class="stat-number" id="gh-following">--</span>
+                  <span class="stat-label">Following</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <span class="about-greeting">Hi 👋</span>
+            <p>
+              Seorang Linux enthusiast, yang suka mengeksplorasi serta
+              mengkonfigurasi <i>operating system</i> dan
+              <i>software</i> open-source. Selain di dunia <i>software</i>,
+              saya juga memiliki ketertarikan pada sisi <i>hardware</i>, mulai
+              dari perakitan PC hingga bereksperimen dengan berbagai
+              <i>Project Microcontroller.</i>
+            </p>
+            <p>
+              Saat ini, saya sedang belajar di sekolah SMK Skill Village Islamic Scholl, saya mengambil jurusan
+              Pengembangan Perangkat
+              Lunak dan Gim (PPLG) untuk terus memperdalam keahlian di bidang
+              pemrograman dan teknologi.
+            </p>
+            <p class="about-motto">"ordinary people, eating rice"</p>
+          </div>
+        </div>
+
+        <div class="about-stack-row">
+          <div class="about-side-block">
+            <h4 class="side-block-title">Tech Stack</h4>
+            <div class="tech-stack">
+              <div class="marquee" aria-hidden="true">
+                <div class="marquee__track">
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-html5" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-css" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-javascript" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-openjdk" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-kotlin" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-php" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-cplusplus" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-flutter" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-dart" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-mariadb" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-html5" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-css" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-javascript" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-openjdk" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-kotlin" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-php" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-cplusplus" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-flutter" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-dart" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-mariadb" />
+                  </svg>
+                </div>
+              </div>
+              <div class="marquee marquee--reverse" aria-hidden="true">
+                <div class="marquee__track">
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-github" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-git" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-linux" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-docker" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-neovim" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-androidstudio" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-archlinux" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-ubuntu" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-opencode" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-claudecode" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-github" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-git" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-linux" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-docker" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-neovim" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-androidstudio" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-archlinux" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-ubuntu" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-opencode" />
+                  </svg>
+                  <svg class="tech-icon">
+                    <use href="assets/icons.svg#tech-claudecode" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="section">
+      <div class="container">
+        <div class="project-header">
+          <h2 class="section-title">Project</h2>
+          <div class="sort-tabs">
+            <button class="sort-btn active" data-sort="popular">
+              Popular
+            </button>
+            <button class="sort-btn" data-sort="latest">Latest</button>
+          </div>
+        </div>
+        <div class="project-grid" id="project-grid">
+          <p class="loading-repos">Loading repositories...</p>
+        </div>
+        <div class="pagination" id="pagination">
+          <button class="pagination-btn" id="prev-page" type="button">
+            Previous
+          </button>
+          <span class="pagination-info" id="page-info">1 / 2</span>
+          <button class="pagination-btn" id="next-page" type="button">
+            Next
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-content">
+          <div class="contact-left">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              Open to opportunities
+            </div>
+            <p class="contact-description">
+              Saya sedang aktif mencari kesempatan untuk berkontribusi dan
+              mengembangkan skill. Jika ada project, colloboration, atau hal
+              menarik lainnya, jangan lupa untuk menghubungi dan mengajak
+              saya!
+            </p>
+            <div class="contact-details">
+              <div class="detail-item">
+                <img class="detail-icon" src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" width="18"
+                  height="18" />
+                <a href="https://wa.me/6285199297781" target="_blank" rel="noopener" class="detail-link">+62
+                  851-9929-7781</a>
+              </div>
+              <div class="detail-item">
+                <img class="detail-icon" src="https://cdn.simpleicons.org/gmail/EA4335" alt="Email" width="18"
+                  height="18" />
+                <a href="mailto:szmaou@gmail.com" class="detail-link">szmaou@gmail.com</a>
+              </div>
+              <div class="detail-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <use href="assets/icons.svg#location" />
+                </svg>
+                <span>Majalengka, Indonesia</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="discord-card">
+              <div class="discord-card-content">
+                <img class="discord-icon" src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord" width="28"
+                  height="28" />
+                <div>
+                  <span class="discord-card-title">R7</span>
+                  <span class="discord-card-desc">Bergabung dengan Komunitas saya</span>
+                </div>
+              </div>
+              <a href="https://discord.gg/29jm2rbycb" class="discord-card-btn" target="_blank" rel="noopener">Join</a>
+            </div>
+            <div class="connect-section">
+              <h4 class="connect-title">Connect With Me</h4>
+              <div class="connect-links">
+                <a href="https://github.com/szmaou" class="connect-link" target="_blank" rel="noopener">
+                  <img class="connect-icon" src="https://cdn.simpleicons.org/github/181717" alt="GitHub" width="20"
+                    height="20" />
+                  GitHub
+                </a>
+                <a href="https://www.instagram.com/san.baecoy" class="connect-link" target="_blank" rel="noopener">
+                  <img class="connect-icon" src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram"
+                    width="20" height="20" />
+                  Instagram
+                </a>
+                <a href="#" class="connect-link" target="_blank" rel="noopener">
+                  <img class="connect-icon" src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube" width="20"
+                    height="20" />
+                  YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Hasan. Dibuat sambil ngopi.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script type="module">
+    /* Mobile/tablet (<=1024px): skip the Three.js dynamic import to avoid the
+       ~2.3MB GLB fetch + WebGL init cost. #slime-mount stays collapsed via
+       responsive.css (display:none) — loaderDone stays gated on the 2 GitHub
+       fetches in js/script.js, so this skip never affects hero loader state. */
+    if (!window.matchMedia("(max-width: 1024px)").matches) {
+      const loadSlime = () => import("./js/slime-viewer.js");
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(loadSlime, { timeout: 3000 });
+      } else {
+        setTimeout(loadSlime, 100);
+      }
+    }
+  </script>
+  <script src="js/particles.js"></script>
+</body>
+
+</html>
